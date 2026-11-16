@@ -80,20 +80,6 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory site
 
 Otwórz <http://localhost:8000>. Serwer dostarcza jedynie statyczne HTML/CSS/JS. Przeglądarka czyta wybrane SFL lokalnie i lokalnie tworzy wynik; skrypty nie wykonują żadnych żądań sieciowych. Polityka CSP dodatkowo blokuje połączenia (`connect-src 'none'`). Nie ma analityki, CDN, formularza uploadu ani zależności zewnętrznych.
 
-## GitHub Pages / inny hosting statyczny
-
-Opublikuj zawartość `site/` jako katalog główny witryny, zachowując wszystkie pliki oraz katalog `images/`. Możesz skopiować je do `docs/` repozytorium przeznaczonego na GitHub Pages lub wdrażać `site/` własnym workflow. Wymagany HTTPS; backend nie jest potrzebny. Paczka nie zawiera konfiguracji przypisanej do konkretnego konta ani repozytorium.
-
-## Jak działa patch
-
-1. Rozpoznaje oryginał po SHA-256 całego SFL i sprawdza rozmiar, nagłówek oraz CRC kontenera.
-2. Rozpakowuje/odkodowuje payload SFL (przesunięcie bajtów kluczem Yaesu; nie ZIP). MAIN zawiera tekst Motorola S-record, DISPLAY tekst ASCII hex.
-3. Sprawdza hash odkodowanego wejścia. Nakłada zapisane różnice, sprawdzając stare bajty każdego zakresu. Zmiany MAIN obejmują również wynikowe sumy rekordów S-record, odtworzone z wydanego pliku.
-4. Sprawdza hash zmienionego payloadu, pakuje/koduje SFL i odtwarza nagłówek wydania.
-5. Sprawdza CRC oraz znany SHA-256 całego wyniku. Niezgodny wynik nie jest udostępniany do pobrania ani zapisywany przez CLI.
-
-Jest to deterministyczny patch dokładnej pary wydań, a nie kompilator kodu firmware ani uniwersalne narzędzie edycji SFL. Nagłówek i sumy pochodzą z zatwierdzonego pliku referencyjnego, nie z dowolnego nowego kodu. Wszystkie dane różnicowe znajdują się w `site/patch-data.js`; Python i JS korzystają z tego samego zestawu.
-
 
 ## Weryfikacja narzędzia
 
