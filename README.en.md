@@ -1,5 +1,7 @@
 # FTdx10 custom buttons patch
 
+**Online patcher:** [ftdx10-mod.sq9pd.pl](https://ftdx10-mod.sq9pd.pl)
+
 [Polski](README.md)
 
 ## 1. Warnings and backup
