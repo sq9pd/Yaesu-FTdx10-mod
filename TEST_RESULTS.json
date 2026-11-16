@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "scope": "Offline reference reproduction and browser UI verification; no radio hardware test in this session",
+  "components": [
+    {
+      "component": "DISPLAY",
+      "python_and_javascript_byte_identical_to_release": true,
+      "reject_modified_truncated_already_patched": true,
+      "reject_wrong_output_hash": true,
+      "sha256": "507865715516e63487e7c887a70a0280c8c6c92a9a8c494fbb6caa187e32328c"
+    },
+    {
+      "component": "MAIN",
+      "python_and_javascript_byte_identical_to_release": true,
+      "reject_modified_truncated_already_patched": true,
+      "reject_wrong_output_hash": true,
+      "sha256": "48bf9aee3ff5707f1fd370a2acf903bf2bb0ef40ea59623882dfdd2d1275facf"
+    }
+  ],
+  "CLI_both_components_and_existing_directory_rejection": true,
+  "browser_UI": {
+    "status": "PASS",
+    "PL_EN_switch": true,
+    "invalid_MAIN_hash_shown_and_patching_blocked": true,
+    "MAIN_and_DISPLAY_input_output_hashes_match": true,
+    "native_Web_Crypto_patching": true,
+    "default_PL": true
+  },
+  "single_model_page": "FTdx10 only; other-model navigation and placeholders removed"
+}

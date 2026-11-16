@@ -1,0 +1,27 @@
+{
+  "format": 1,
+  "release": "FTdx10 DISPLAY V06 + MAIN V05",
+  "hardware_status": "Działanie bieżącej modyfikacji na radiu potwierdzone przez użytkownika 2026-11-16; historyczne raporty zachowano bez zmian.",
+  "components": [
+    {
+      "component": "DISPLAY",
+      "version": "V06",
+      "filename": "FTDX10_DISPLAY_V0106.SFL",
+      "size": 3374108,
+      "input_sha256": "6692d93e285705bc4d4c32c6f0ab75104b0fa0cc91cde3f818696160f8c68222",
+      "output_sha256": "507865715516e63487e7c887a70a0280c8c6c92a9a8c494fbb6caa187e32328c",
+      "decoded_input_sha256": "36bf0d2ba418c78547f8d3b619194cc2dece01da2325504822868f977b11449f",
+      "decoded_output_sha256": "5f272524dc65fb80a21396236c93273f66669a0722ad41b97e6f587dea0ce957"
+    },
+    {
+      "component": "MAIN",
+      "version": "V05",
+      "filename": "FTDX10_MAIN_V0115.SFL",
+      "size": 738986,
+      "input_sha256": "6d04cc11a1f5531212be85da2238d47767920d6a3d11365907f58404466202eb",
+      "output_sha256": "48bf9aee3ff5707f1fd370a2acf903bf2bb0ef40ea59623882dfdd2d1275facf",
+      "decoded_input_sha256": "fcb5a819e451ed0fde6fe660b664c5a8959264d0da9259f9782cfc5505647d7b",
+      "decoded_output_sha256": "4f4812d4452bd67cf7781fda14698d785d8e90877bd20c0a95ee0a0fc3b22337"
+    }
+  ]
+}
